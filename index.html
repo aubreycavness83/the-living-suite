@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Furniture Store Two</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container my-5">
+      <!-- Hero Carousel-->
+      <section class="hero mb-5">
+        <div class="hero-carousel" aria-label="Home hero carousel">
+          <div class="hero-carousel__track">
+            <div class="hero-carousel__slide">
+              <img
+                class="hero-carousel__image"
+                src="images/hero-living-room.jpg"
+                alt="Slide 1"
+              />
+              <div class="hero-carousel__caption">
+                <h2 class="hero-carousel__title">Winter Savings Event</h2>
+                <p class="hero-carousel__text">
+                  Up to 40% off select Living Room collections
+                </p>
+              </div>
+            </div>
+
+            <div class="hero-carousel__slide">
+              <img
+                class="hero-carousel__image"
+                src="images/bedroom-hero.jpg"
+                alt="Slide 2"
+              />
+              <div class="hero-carousel__caption">
+                <h2 class="hero-carousel__title">Bedroom Refresh</h2>
+                <p class="hero-carousel__text">
+                  Mondern Beds and Storage for any space.
+                </p>
+              </div>
+            </div>
+
+            <div class="hero-carousel__slide">
+              <img
+                src="images/dining-room-hero.jpg"
+                alt="Slide 3"
+                class="hero-carousel__image"
+              />
+              <div class="hero-carousel__caption">
+                <h2 class="hero-carousel__title">Dining Deals</h2>
+                <p class="hero-carousel__text">
+                  Gather in style with new Dining Sets
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="hero-carousel__btn hero-carousel__btn--prev"
+            type="button"
+            aria-label="Previous Slide"
+          ></button>
+
+          <button
+            class="hero-carousel__btn hero-carousel__btn--next"
+            type="button"
+            aria-label="Next Slide"
+          ></button>
+
+          <div class="hero-carousel__dots" aria-label="Slide dots">
+            <button
+              class="hero-carousel__dot hero-carousel__dot--active"
+              type="button"
+              aria-label="Go to slide 1"
+            ></button>
+            <button
+              class="hero-carousel__dot"
+              type="button"
+              aria-label="Go to slide 2"
+            ></button>
+            <button
+              class="hero-carousel__dot"
+              type="button"
+              aria-label="Go to slide 3"
+            ></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Intro Section -->
+      <section class="intro-section mb-5">
+        <div class="intro-section__container">
+          <div class="intro-section__content">
+            <h2 class="intro-section__title">The Furniture Store</h2>
+            <p class="intro-section__text">
+              Welcome to The Furniture Store, your destination for premium quality furniture and home décor. We pride ourselves on offering curated collections that combine style, comfort, and durability. Whether you're furnishing your first home or refreshing your space, our expert selection and competitive prices make it easy to find exactly what you need.
+            </p>
+            <button class="intro-section__cta">Explore Collections</button>
+          </div>
+          <div class="intro-section__image-wrapper">
+            <img 
+              class="intro-section__image" 
+              src="images/product-card-recliner.jpg" 
+              alt="The Furniture Store"
+              id="intro-random-image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Category Section -->
+      <section class="category-section mb-5">
+        <div class="category-grid">
+          <article class="category-card">
+            <div class="category-card__image-wrapper">
+              <img 
+                src="images/hero-living-room.jpg" 
+                alt="Living Room" 
+                class="category-card__image"
+              />
+            </div>
+            <div class="category-card__content">
+              <h3 class="category-card__title">Shop Living Room</h3>
+              <a href="#" class="category-card__link">Browse Collection →</a>
+            </div>
+          </article>
+
+          <article class="category-card">
+            <div class="category-card__image-wrapper">
+              <img 
+                src="images/dining-room-hero.jpg" 
+                alt="Dining Room" 
+                class="category-card__image"
+              />
+            </div>
+            <div class="category-card__content">
+              <h3 class="category-card__title">Shop Dining Room</h3>
+              <a href="#" class="category-card__link">Browse Collection →</a>
+            </div>
+          </article>
+
+          <article class="category-card">
+            <div class="category-card__image-wrapper">
+              <img 
+                src="images/bedroom-hero.jpg" 
+                alt="Bedroom" 
+                class="category-card__image"
+              />
+            </div>
+            <div class="category-card__content">
+              <h3 class="category-card__title">Shop Bedroom</h3>
+              <a href="#" class="category-card__link">Browse Collection →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="product-slider">
+        <header
+          class="product-slider__header d-flex align-items-center justify-content-between mb-3"
+        >
+        <div>
+          <h2 class="product-slider__title mb-1">Featured Deals</h2>
+          <p class="product-slider__subtitle mb-0">
+            The deals you don't want to miss.
+          </p>
+        </div>
+
+         <div class="product-slider__controls">
+      <button class="product-slider__btn product-slider__btn--prev btn" type="button" aria-label="Previous products">
+        Prev
+      </button>
+      <button class="product-slider__btn product-slider__btn--next btn" type="button" aria-label="Next products">
+        Next
+      </button>
+    </div>
+      </header>
+
+
+        <section class="product-slider__viewport">
+        <div class="product-slider__track">
+          <article class="product-card">
+            <img
+              src="images/product-card-sofa.jpg"
+              alt="Item 1"
+              class="product-card__img"
+            />
+            <h3 class="product-card__title">Sofa 1</h3>
+            <p class="product-card__price">$699</p>
+          </article>
+
+          <article class="product-card">
+            <img
+              src="images/product-card-sofa-2.jpg"
+              alt="Item 2"
+              class="product-card__img"
+            />
+            <h3 class="product-card__title">Sofa 2</h3>
+            <p class="product-card__price">$799</p>
+          </article>
+
+          <article class="product-card">
+            <img
+              src="images/product-card-bedroom.jpg"
+              alt="Item 3"
+              class="product-card__img"
+            />
+            <h3 class="product-card__title">Bed 1</h3>
+            <p class="product-card__price">$499</p>
+          </article>
+
+          <article class="product-card">
+            <img
+              src="images/product-card-bedroom-2.jpg"
+              alt="Item 4"
+              class="product-card__img"
+            />
+            <h3 class="product-card__title">Bed 2</h3>
+            <p class="product-card__price">$599</p>
+          </article>
+
+          <article class="product-card">
+            <img
+              src="images/product-card-dresser.jpg"
+              alt="Item 5"
+              class="product-card__img"
+            />
+            <h3 class="product-card__title">Dresser</h3>
+            <p class="product-card__price">$399</p>
+          </article>
+
+          <article class="product-card">
+            <img
+              src="images/product-card-recliner.jpg"
+              alt="Item 6"
+              class="product-card__img"
+            />
+            <h3 class="product-card__title">Recliner</h3>
+            <p class="product-card__price">$349</p>
+          </article>
+
+          <article class="product-card">
+            <img
+              src="images/product-card-dining-set.jpg"
+              alt="Item 7"
+              class="product-card__img"
+            />
+            <h3 class="product-card__title">Dining Set</h3>
+            <p class="product-card__price">$899</p>
+          </article>
+
+          <article class="product-card">
+            <img
+              src="images/product-card-coffee-table.jpg"
+              alt="Item 8"
+              class="product-card__img"
+            />
+            <h3 class="product-card__title">Coffee Table</h3>
+            <p class="product-card__price">$199</p>
+          </article>
+
+          <article class="product-card">
+            <img
+              src="images/product-card-night-stand.jpg"
+              alt="Item 9"
+              class="product-card__img"
+            />
+            <h3 class="product-card__title">Night Stand</h3>
+            <p class="product-card__price">$129</p>
+          </article>
+
+          <article class="product-card">
+            <img
+              src="images/product-card-desk.jpg"
+              alt="Item 10"
+              class="product-card__img"
+            />
+            <h3 class="product-card__title">Desk</h3>
+            <p class="product-card__price">$249</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Financing Options Section -->
+      <section class="financing-section mt-5 mb-5">
+        <div class="financing-container">
+          <div class="financing-image-wrapper">
+            <img 
+              class="financing-image" 
+              src="images/product-card-sofa.jpg" 
+              alt="Flexible Financing"
+              id="financing-random-image"
+            />
+          </div>
+          <div class="financing-content">
+            <div class="financing-badge">FLEXIBLE PAYMENTS</div>
+            <h2 class="financing-title">Shop Now, Pay Later</h2>
+            <p class="financing-subtitle">Make your dream home a reality with flexible financing options</p>
+            <ul class="financing-features">
+              <li class="financing-feature">
+                <span class="financing-feature-icon">✓</span>
+                <span>12-month interest-free financing on purchases over $499</span>
+              </li>
+              <li class="financing-feature">
+                <span class="financing-feature-icon">✓</span>
+                <span>24-month payment plans available for select items</span>
+              </li>
+              <li class="financing-feature">
+                <span class="financing-feature-icon">✓</span>
+                <span>No hidden fees or surprise charges</span>
+              </li>
+              <li class="financing-feature">
+                <span class="financing-feature-icon">✓</span>
+                <span>Instant approval in minutes</span>
+              </li>
+            </ul>
+            <button class="financing-cta">Learn More About Financing</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    
+    <script src="script.js"></script>
+  </body>
+</html>
