@@ -1,6 +1,6 @@
 const heroTrack = document.querySelector(".hero-carousel__track");
 const heroSlides = Array.from(
-  document.querySelectorAll(".hero-carousel__slide")
+  document.querySelectorAll(".hero-carousel__slide"),
 );
 const heroPrevBtn = document.querySelector(".hero-carousel__btn--prev");
 const heroNextBtn = document.querySelector(".hero-carousel__btn--next");
@@ -66,7 +66,7 @@ function renderProductSlider() {
 }
 
 function getMaxProductIndex() {
-  const visibleCount = 5;
+  const visibleCount = 4;
   return Math.max(0, productCards.length - visibleCount);
 }
 
@@ -91,7 +91,7 @@ window.addEventListener("resize", renderProductSlider);
 // Financing Section - Random Image
 function setRandomFinancingImage() {
   const productImages = Array.from(
-    document.querySelectorAll(".product-card__img")
+    document.querySelectorAll(".product-card__img"),
   ).map((img) => img.src);
 
   if (productImages.length > 0) {
@@ -105,4 +105,58 @@ function setRandomFinancingImage() {
   }
 }
 
-setRandomFinancingImage();
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.getElementById("close-btn");
+const nextBtn = document.getElementById("next-btn");
+const prevBtn = document.getElementById("prev-btn");
+const triggers = document.querySelectorAll(".lightbox-trigger");
+
+let currentIndex = 0;
+
+function updateLightbox(index) {
+  const selectedImage = triggers[index];
+  lightboxImg.src = selectedImage.src;
+}
+
+triggers.forEach((image, index) => {
+  image.addEventListener("click", () => {
+    currentIndex = index;
+    lightbox.style.display = "flex";
+    updateLightbox(index);
+  });
+});
+
+nextBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  e.preventDefault();
+  currentIndex = (currentIndex + 1) % triggers.length;
+  updateLightbox(currentIndex);
+});
+
+prevBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  e.preventDefault();
+  currentIndex = (currentIndex - 1 + triggers.length) % triggers.length;
+  updateLightbox(currentIndex);
+});
+
+closeBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  lightbox.style.display = "none";
+});
+
+lightbox.addEventListener("click", (e) => {
+  // Close when clicking on the dark background, but not on buttons or the image
+  if (
+    e.target === lightbox ||
+    (e.target !== nextBtn &&
+      e.target !== prevBtn &&
+      e.target !== lightboxImg &&
+      e.target !== closeBtn &&
+      !nextBtn.contains(e.target) &&
+      !prevBtn.contains(e.target))
+  ) {
+    lightbox.style.display = "none";
+  }
+});
