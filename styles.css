@@ -307,7 +307,6 @@ h6,
   position: relative;
   display: flex;
   flex-direction: column;
-  cursor: pointer;
 }
 
 .category-card:hover {
